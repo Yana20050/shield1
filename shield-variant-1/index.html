@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHIELD — Охоронна компанія</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261009e">
+<link rel="stylesheet" href="shiny-button.css?v=20260923l">
+<link rel="stylesheet" href="animations.css?v=20260923l">
+</head>
+<body>
+
+<!-- INTRO LOADER -->
+<div class="site-loader" aria-hidden="true">
+  <div class="site-loader-glow"></div>
+  <img src="media/logo.png" alt="" class="site-loader-logo">
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo logo--home">
+      <img src="media/logo.png" alt="SHIELD" class="logo-img header-logo-img">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#services">Послуги</a>
+      <a href="#advantages">Переваги</a>
+      <a href="#clients">Клієнти</a>
+      <a href="#pricing">Вартість</a>
+      <a href="#reviews">Відгуки</a>
+      <div class="nav-socials">
+        <a href="viber://chat?number=%2B380980079007" target="_blank" rel="noopener" class="social-circle" aria-label="Viber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12.1 3.3c5 0 8.8 2.9 8.8 8.4 0 5.2-3.5 8.4-8.8 8.4-.9 0-1.9-.1-2.7-.3-.3-.1-.5 0-.7.2l-1.6 1.6c-.3.3-.6.2-.6-.2v-2.4c0-.3-.1-.5-.4-.7-2.4-1.6-3.9-4-3.9-6.6 0-5.5 3.9-8.4 9.9-8.4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
+        <a href="https://wa.me/380980079007" target="_blank" rel="noopener" class="social-circle" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 3C9.01 3 3.34 8.66 3.34 15.65c0 2.29.6 4.44 1.7 6.32L3 29l7.2-1.97a12.6 12.6 0 0 0 5.8 1.43h.005c6.99 0 12.66-5.66 12.66-12.65C28.67 8.82 23 3 16.004 3Z"/></svg></a>
+        <a href="https://t.me/Shield_Ukraine_007" target="_blank" rel="noopener" class="social-circle" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 4L2.5 11.5l6 2.2M21 4l-3.2 16-8.3-6.1M21 4L9.3 14.1m0 0-.8 5.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://totalshield.com.ua" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Магазин <span class="arrow">→</span></a>
+      <a href="https://t.me/Shield_Ukraine_007" target="_blank" rel="noopener" class="social-circle" aria-label="Telegram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 4L2.5 11.5l6 2.2M21 4l-3.2 16-8.3-6.1M21 4L9.3 14.1m0 0-.8 5.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="viber://chat?number=%2B380980079007" target="_blank" rel="noopener" class="social-circle" aria-label="Viber">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12.1 3.3c5 0 8.8 2.9 8.8 8.4 0 5.2-3.5 8.4-8.8 8.4-.9 0-1.9-.1-2.7-.3-.3-.1-.5 0-.7.2l-1.6 1.6c-.3.3-.6.2-.6-.2v-2.4c0-.3-.1-.5-.4-.7-2.4-1.6-3.9-4-3.9-6.6 0-5.5 3.9-8.4 9.9-8.4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8.5c0 4 2.5 6.3 6.3 6.5.5 0 .6-.4.6-.7l-.1-1.1c0-.3-.2-.5-.5-.6l-1.5-.4c-.3-.1-.5 0-.7.2l-.4.5c-1-.4-1.9-1.3-2.3-2.3l.5-.4c.2-.2.3-.4.2-.7l-.4-1.5c-.1-.3-.3-.5-.6-.5H9Z" fill="currentColor"/></svg>
+      </a>
+      <a href="https://wa.me/380980079007" target="_blank" rel="noopener" class="social-circle" aria-label="WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 3C9.01 3 3.34 8.66 3.34 15.65c0 2.29.6 4.44 1.7 6.32L3 29l7.2-1.97a12.6 12.6 0 0 0 5.8 1.43h.005c6.99 0 12.66-5.66 12.66-12.65C28.67 8.82 23 3 16.004 3Zm0 23.02h-.004a10.5 10.5 0 0 1-5.35-1.47l-.384-.23-4.27 1.17 1.14-4.17-.25-.43a10.47 10.47 0 0 1-1.6-5.55c0-5.8 4.72-10.52 10.72-10.52 2.86 0 5.55 1.12 7.58 3.14a10.63 10.63 0 0 1 3.14 7.58c0 5.8-4.72 10.51-10.72 10.51Zm5.88-7.88c-.32-.16-1.9-.94-2.2-1.04-.3-.11-.51-.16-.73.16-.21.32-.84 1.04-1.03 1.25-.19.22-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.6-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.4-.03-.56-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.67 0 1.57 1.15 3.09 1.3 3.3.16.22 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-media">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="media/hero.mp4?v=20261008b" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-orb-accent" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">пульт моніторингу та підтримка</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">4 роки</div>
+          <div class="stat-label">досвіду у сфері захисту</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">702+</div>
+          <div class="stat-label">об'єктів під охороною</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">1315+</div>
+          <div class="stat-label">виконаних робіт</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <p class="eyebrow">01 / НАШІ ПОСЛУГИ</p>
+    <h2 class="section-title">Послуги, які надаємо</h2>
+
+    <div class="service-grid">
+      <article class="service-card service-card--photo">
+        <div class="service-img service-img--camera"><img src="media/service-cctv.webp?v=20261008c" alt="Відеоспостереження" loading="lazy"></div>
+        <h3>Відеоспостереження</h3>
+        <p class="service-short">Камери для квартир, будинків, офісів і складів.</p>
+        <p class="service-full">Проєктування, монтаж й обслуговування систем відеоспостереження для квартир, будинків, офісів, магазинів та складів. Використовуємо камери з нічним баченням, хмарний архів і віддалений перегляд з телефону 24/7.</p>
+      </article>
+      <article class="service-card service-card--photo">
+        <div class="service-img service-img--ajax"><img src="media/service-ajax.webp?v=20261008f" alt="Сигналізація AJAX" loading="lazy"></div>
+        <h3>Сигналізація AJAX</h3>
+        <p class="service-short">Датчики й мобільне керування для дому та бізнесу.</p>
+        <p class="service-full">Сучасні рішення AJAX для житла й бізнесу: датчики руху, відчинення й розбиття, мобільне керування та готові сценарії охорони. Офіційний партнер AJAX — підбираємо та монтуємо повний комплект під ваш об'єкт.</p>
+      </article>
+      <article class="service-card service-card--photo">
+        <div class="service-img service-img--intercom"><img src="media/service-intercom.webp?v=20261008h" alt="СКУД і домофонія" loading="lazy"></div>
+        <h3>СКУД і домофонія</h3>
+        <p class="service-short">Контроль доступу та домофонні рішення.</p>
+        <p class="service-full">Контроль доступу, домофонні системи, турнікети та рішення для об'єктів з різними рівнями доступу. Відеодомофонія, електронні замки та інтеграція з системою охорони в одному рішенні.</p>
+      </article>
+      <article class="service-card service-card--photo">
+        <div class="service-img service-img--transfer"><img src="media/service-transfer.webp?v=20261008i" alt="Трансфер і супровід" loading="lazy"></div>
+        <h3>Трансфер і супровід</h3>
+        <p class="service-short">Безпечні поїздки для бізнесу та родини.</p>
+        <p class="service-full">Бізнес-трансфер, супровід осіб, супровід дітей та індивідуальні маршрути із залученням охоронного супроводу. Досвідчені охоронці-водії та індивідуальний графік під ваш розклад.</p>
+      </article>
+      <article class="service-card service-card--photo">
+        <div class="service-img service-img--monitor"><img src="media/service-control.webp?v=20261008j" alt="Пультова охорона" loading="lazy"></div>
+        <h3>Пультова охорона</h3>
+        <p class="service-short">Моніторинг і реагування 24/7.</p>
+        <p class="service-full">Цілодобовий моніторинг, оперативна обробка сигналів і виїзд груп швидкого реагування 24/7. Підключення без прихованих платежів та індивідуальний план реагування на об'єкт.</p>
+      </article>
+    </div>
+
+    <div class="accordion" id="servicesAccordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          <span class="accordion-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 6v5c0 4.7 3.2 8.7 8 10 4.8-1.3 8-5.3 8-10V6l-8-3Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span>Фізична охорона і пости</span>
+          <span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <div class="accordion-panel">
+          <p>Організація стаціонарних та мобільних постів охорони для об'єктів будь-якого формату — від офісу до промислової території.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          <span class="accordion-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 16v-3.5L6 8h9.5L18 12.5V16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16h1.5M18 16h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="2.5" y="12.5" width="19" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.7"/><circle cx="7.5" cy="18" r="1.6" stroke="currentColor" stroke-width="1.7"/><circle cx="16.5" cy="18" r="1.6" stroke="currentColor" stroke-width="1.7"/><path d="M8 8V6.5a1.5 1.5 0 0 1 1.5-1.5h5A1.5 1.5 0 0 1 16 6.5V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <span>Трансфер дітей</span>
+          <span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <div class="accordion-panel">
+          <p>Безпечне супроводження дітей до школи, гуртків та інших закладів довіреними охоронцями-водіями.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          <span class="accordion-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 16V8a1 1 0 0 1 1-1h9v9H3Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 10h4l3 3v3h-7v-6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.6" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="1.6" stroke="currentColor" stroke-width="1.7"/></svg></span>
+          <span>Супровід вантажів</span>
+          <span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <div class="accordion-panel">
+          <p>Охоронний супровід вантажних перевезень на маршруті, контроль збереження та оперативний зв'язок з диспетчером.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          <span class="accordion-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 21V9l6-4 6 4v12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 21v-7l6 3v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 13v.01M9 17v.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <span>Комплексний захист бізнесу</span>
+          <span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <div class="accordion-panel">
+          <p>Індивідуальний план безпеки для бізнесу: відеоспостереження, сигналізація, СКУД та фізична охорона в одному рішенні.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES / PROCESS -->
+<section class="section process" id="advantages">
+  <div class="container">
+    <p class="eyebrow eyebrow--light">02 / ЧОМУ НАС ОБИРАЮТЬ</p>
+    <h2 class="section-title section-title--light">Як відбувається робота з SHIELD</h2>
+
+    <div class="process-flow" aria-hidden="true">
+      <svg viewBox="0 0 1000 60" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="process-flow-path" d="M100,55 C160,10 240,10 300,55" stroke="#4d7fff" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="process-flow-path" d="M300,55 C360,10 440,10 500,55" stroke="#4d7fff" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="process-flow-path" d="M500,55 C560,10 640,10 700,55" stroke="#4d7fff" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="process-flow-path" d="M700,55 C760,10 840,10 900,55" stroke="#4d7fff" stroke-width="2.5" stroke-linecap="round"/>
+        <circle class="process-flow-dot" r="5" cx="100" cy="55" opacity="0"/>
+      </svg>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-num">01</div>
+        <div class="process-rule"></div>
+        <h3>Заявка</h3>
+        <p>Ви залишаєте звернення через сайт, телефон або месенджер.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-num">02</div>
+        <div class="process-rule"></div>
+        <h3>Огляд і консультація</h3>
+        <p>Уточнюємо задачу, тип об'єкта й підбираємо оптимальний формат рішення.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-num">03</div>
+        <div class="process-rule"></div>
+        <h3>Кошторис</h3>
+        <p>Готуємо прозорий розрахунок вартості під ваш об'єкт та узгоджуємо бюджет.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-num">04</div>
+        <div class="process-rule"></div>
+        <h3>Монтаж / підключення</h3>
+        <p>Встановлюємо обладнання або запускаємо послугу згідно погодженого плану.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-num">05</div>
+        <div class="process-rule"></div>
+        <h3>Моніторинг і реагування</h3>
+        <p>Підтримка, спостереження та швидке реагування працюють 24/7.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AJAX PARTNERSHIP -->
+<section class="section ajax-section">
+  <div class="container">
+    <div class="ajax-card">
+      <div class="ajax-content">
+        <span class="ajax-eyebrow">AJAX</span>
+        <h3>Офіційне партнерство з AJAX</h3>
+        <ul>
+          <li>офіційні матеріали та фото обладнання AJAX</li>
+          <li>готові рішення для квартир, будинків і бізнесу</li>
+          <li>окрема точка входу для консультації та підбору систем</li>
+        </ul>
+        <div class="ajax-actions">
+          <a href="https://totalshield.com.ua" target="_blank" rel="noopener" class="btn btn-white">Перейти в магазин <span class="arrow">→</span></a>
+          <span class="ajax-picker-fab-wrap">
+            <button type="button" class="btn ajax-picker-fab" id="ajaxPickerOpen" aria-label="Підібрати обладнання AJAX">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2.5" stroke="currentColor" stroke-width="1.7"/><rect x="7" y="5" width="10" height="4" rx="1" fill="currentColor"/><circle cx="7.8" cy="13" r="1.1" fill="currentColor"/><circle cx="12" cy="13" r="1.1" fill="currentColor"/><circle cx="16.2" cy="13" r="1.1" fill="currentColor"/><circle cx="7.8" cy="17" r="1.1" fill="currentColor"/><circle cx="12" cy="17" r="1.1" fill="currentColor"/><circle cx="16.2" cy="17" r="1.1" fill="currentColor"/></svg>
+            </button>
+            <span class="ajax-picker-fab-tip" role="tooltip">Підібрати обладнання</span>
+          </span>
+        </div>
+      </div>
+      <div class="ajax-media">
+        <video class="ajax-video" autoplay muted loop playsinline>
+          <source src="media/ajax.mp4?v=20261002a" type="video/mp4">
+        </video>
+        <div class="ajax-media-overlay" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AJAX PRODUCT PICKER MODAL -->
+<div class="ajax-picker" id="ajaxPicker" aria-hidden="true">
+  <div class="ajax-picker-backdrop" id="ajaxPickerBackdrop"></div>
+  <div class="ajax-picker-dialog" role="dialog" aria-modal="true" aria-labelledby="ajaxPickerTitle">
+    <button type="button" class="ajax-picker-close" id="ajaxPickerClose" aria-label="Закрити">✕</button>
+    <div class="ajax-picker-body">
+      <span class="ajax-eyebrow">AJAX</span>
+      <div class="ajax-picker-steps" id="ajaxPickerSteps">
+        <span class="ajax-picker-step is-active" data-step="1">1. Приміщення</span>
+        <span class="ajax-picker-step" data-step="2">2. Параметри</span>
+        <span class="ajax-picker-step" data-step="3">3. Комплект</span>
+      </div>
+
+      <!-- STEP 1: premise type -->
+      <div class="ajax-picker-screen is-active" data-screen="1">
+        <h3 id="ajaxPickerTitle">Виберіть тип приміщення</h3>
+        <div class="ajax-type-list" id="ajaxTypeList"></div>
+      </div>
+
+      <!-- STEP 2: parameters -->
+      <div class="ajax-picker-screen" data-screen="2">
+        <h3>Вкажіть параметри об'єкта</h3>
+        <div class="ajax-param-list" id="ajaxParamList"></div>
+      </div>
+
+      <!-- STEP 3: generated kit -->
+      <div class="ajax-picker-screen" data-screen="3">
+        <h3>Ваш комплект обладнання</h3>
+        <p class="ajax-picker-hint">Кількість пристроїв підібрана автоматично під параметри об'єкта — кожен пункт можна змінити вручну.</p>
+        <div class="ajax-picker-list" id="ajaxPickerList"></div>
+        <button type="button" class="ajax-add-toggle" id="ajaxAddToggle">+ Додати ще пристрій</button>
+        <div class="ajax-picker-list ajax-picker-list--addons" id="ajaxAddonList" hidden></div>
+      </div>
+
+      <div class="ajax-picker-nav">
+        <button type="button" class="btn btn-outline-light" id="ajaxPickerBack" hidden>← Назад</button>
+        <button type="button" class="btn btn-primary" id="ajaxPickerNext">Далі <span class="arrow">→</span></button>
+      </div>
+
+      <div class="ajax-picker-footer" id="ajaxPickerFooter" hidden>
+        <div class="ajax-picker-total">
+          <span>Орієнтовна вартість обладнання</span>
+          <b id="ajaxPickerTotal">0 грн</b>
+        </div>
+        <a href="#consultation" class="btn btn-primary" id="ajaxPickerContact">Зв'язатись з менеджером <span class="arrow">→</span></a>
+      </div>
+      <p class="ajax-picker-note">Точну вартість монтажу та обладнання уточнить наш фахівець після безкоштовного огляду об'єкта.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <p class="eyebrow">03 / ОРІЄНТОВНА ВАРТІСТЬ</p>
+    <h2 class="section-title">Прайс</h2>
+
+    <div class="pricing-grid">
+      <article class="price-card price-card--accent">
+        <span class="price-badge">Популярне рішення</span>
+        <span class="price-tag price-tag--light">ПУЛЬТ</span>
+        <h3>Пультова охорона</h3>
+        <div class="price-value">від 550 грн/міс.</div>
+        <p class="price-note">З виїздами груп швидкого реагування.</p>
+        <ul class="price-features">
+          <li>Цілодобовий моніторинг 24/7</li>
+          <li>Виїзд групи швидкого реагування</li>
+          <li>Сповіщення в мобільному додатку</li>
+          <li>Підключення без прихованих платежів</li>
+          <li>Індивідуальний план реагування</li>
+        </ul>
+      </article>
+      <article class="price-card">
+        <span class="price-tag">КВАРТИРА</span>
+        <h3>Сигналізація квартири</h3>
+        <div class="price-value">від 12 099 грн</div>
+        <p class="price-note">Встановлення системи «під ключ».</p>
+        <ul class="price-features">
+          <li>Обладнання AJAX у комплекті</li>
+          <li>Датчики руху та відкриття дверей</li>
+          <li>Керування через мобільний застосунок</li>
+          <li>Базове налаштування сценаріїв</li>
+        </ul>
+      </article>
+      <article class="price-card">
+        <span class="price-tag">БУДИНОК</span>
+        <h3>Посилений захист будинку</h3>
+        <div class="price-value">від 25 099 грн</div>
+        <p class="price-note">Розширений комплекс для приватного будинку.</p>
+        <ul class="price-features">
+          <li>Розширена мережа датчиків</li>
+          <li>Контроль периметра та вулиці</li>
+          <li>Резервне живлення системи</li>
+          <li>Інтеграція з відеоспостереженням</li>
+        </ul>
+      </article>
+      <article class="price-card">
+        <span class="price-tag">ВІДЕОНАГЛЯД</span>
+        <h3>Відеоспостереження</h3>
+        <div class="price-value">від 7 500 грн</div>
+        <p class="price-note">Одна камера; складні комплекси — індивідуально.</p>
+        <ul class="price-features">
+          <li>HD-камери з нічним баченням</li>
+          <li>Хмарне зберігання архіву</li>
+          <li>Віддалений перегляд 24/7</li>
+          <li>Гнучке масштабування системи</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="section locations">
+  <div class="locations-map" aria-hidden="true">
+    <div class="locations-map-img"></div>
+    <div class="locations-map-overlay"></div>
+  </div>
+  <div class="container">
+    <p class="eyebrow eyebrow--light">04 / ПРО SHIELD</p>
+    <h2 class="section-title section-title--light">Про SHIELD</h2>
+
+    <div class="locations-grid">
+      <div class="location-card">
+        <div class="location-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 11.5 12 4l9 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-5.5a2 2 0 0 1 2-2v0a2 2 0 0 1 2 2V20h3.5a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Безпека власного житла</h3>
+        <p>Візьмемо тривогу за безпеку приватного житла й життя ваших близьких на себе.</p>
+      </div>
+      <div class="location-card">
+        <div class="location-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="8" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.7"/><path d="M9 8V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Захист бізнесу — під ключ</h3>
+        <p>Довірте всю технічну роботу нам — корпоративні умови для вашого бізнесу.</p>
+      </div>
+      <div class="location-card">
+        <div class="location-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 16v-3.5L6 8h9.5L18 12.5V16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16h1.5M18 16h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="2.5" y="12.5" width="19" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.7"/><circle cx="7.5" cy="18" r="1.6" stroke="currentColor" stroke-width="1.7"/><circle cx="16.5" cy="18" r="1.6" stroke="currentColor" stroke-width="1.7"/><path d="M8 8V6.5a1.5 1.5 0 0 1 1.5-1.5h5A1.5 1.5 0 0 1 16 6.5V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Преміум трансфер</h3>
+        <p>Поїздки з комфортом та безпекою по Україні та закордон.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section partners" id="clients">
+  <div class="container">
+    <p class="eyebrow">05 / ПАРТНЕРИ ТА КЛІЄНТИ</p>
+    <h2 class="section-title">Під охороною SHIELD</h2>
+
+    <div class="logo-grid">
+      <div class="logo-card logo-card--white logo-card--img logo-card--color"><img src="media/partners/sanpid.webp" alt="SANPID"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/vema-zahid.png" alt="ВЗ ВЕМА ЗАХІД"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/novaposhta.png" alt="Нова Пошта"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/leogene.png" alt="LEOGENE"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/lapec.jpg" alt="LA П'ЄЦ"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/anc.png" alt="АНЦ"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/galfort.jpg" alt="Galfort"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/zp.jpg" alt="ZP"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/business-brotherhood.jpg" alt="Українське Бізнес Братство"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/flagman.jpg" alt="Flagman"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/tetrisbox.jpg" alt="TETRIS BOX"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/coffee-lab-green.png" alt="Coffee Lab"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/pizzahot.png" alt="Pizza Hot"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/rius.jpg" alt="RIUS Business Centre & Hotel"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/egastronom.webp" alt="Єгастроном"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/euam1.png" alt="EU EUAM Ukraine"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/joymarket.jpg" alt="Joy Market"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/biomed.png" alt="Biomed"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/coffeelab-roasters.png" alt="Coffee Lab Roasters"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/knygarnya-e.png" alt="Книгарня Є"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/kapitel.jpg" alt="Kapitel"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/arbofari.png" alt="Arbofari"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/art-school.jpg" alt="Львівська школа мистецтв №5"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img src="media/partners/avtolider.png" alt="АвтоЛідер"></div>
+      <div class="logo-card logo-card--white logo-card--img"><img class="logo-img--sm" src="media/partners/gazik.png" alt="Газік"></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <p class="eyebrow eyebrow--light">06 / ВІДГУКИ КЛІЄНТІВ</p>
+    <h2 class="section-title section-title--light">Довіра, підтверджена співпрацею</h2>
+
+    <div class="reviews-grid">
+      <article class="review-card">
+        <svg class="review-quote" width="34" height="26" viewBox="0 0 34 26" fill="none" aria-hidden="true"><path d="M14.5 0 8 13.5H14V26H0V13.5L6.5 0H14.5ZM34 0L27.5 13.5H33.5V26H19.5V13.5L26 0H34Z" fill="currentColor"/></svg>
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">Цінуємо SHIELD за оперативність, якісну комунікацію та стабільну роботу команди.</p>
+        <div class="review-author">
+          <div class="review-logo"><img src="media/partners/lapec.jpg" alt="LA П'ЄЦ"></div>
+          <div class="review-author-info">
+            <span class="review-author-name">Роман Боднар</span>
+            <span class="review-author-role">LA П'ЄЦ · Засновник @la_piec &amp; @pizza_hot.ua</span>
+          </div>
+        </div>
+        <span class="review-tag">БІЗНЕС / МЕРЕЖА ЗАКЛАДІВ</span>
+      </article>
+      <article class="review-card">
+        <svg class="review-quote" width="34" height="26" viewBox="0 0 34 26" fill="none" aria-hidden="true"><path d="M14.5 0 8 13.5H14V26H0V13.5L6.5 0H14.5ZM34 0L27.5 13.5H33.5V26H19.5V13.5L26 0H34Z" fill="currentColor"/></svg>
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">Команда працює якісно та оперативно, забезпечуючи надійну підтримку для магазинів і бізнесу.</p>
+        <div class="review-author">
+          <div class="review-logo"><img src="media/partners/egastronom.webp" alt="Єгастроном"></div>
+          <div class="review-author-info">
+            <span class="review-author-name">Іван Войтович</span>
+            <span class="review-author-role">Єгастроном · Учасник Українського Бізнес-Братства</span>
+          </div>
+        </div>
+        <span class="review-tag">RETAIL / КОМЕРЦІЙНІ ПЛОЩІ</span>
+      </article>
+      <article class="review-card">
+        <svg class="review-quote" width="34" height="26" viewBox="0 0 34 26" fill="none" aria-hidden="true"><path d="M14.5 0 8 13.5H14V26H0V13.5L6.5 0H14.5ZM34 0L27.5 13.5H33.5V26H19.5V13.5L26 0H34Z" fill="currentColor"/></svg>
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">Професійний підхід, швидка реакція на запити та зрозуміла комунікація на всіх етапах співпраці.</p>
+        <div class="review-author">
+          <div class="review-logo"><img src="media/partners/biomed.png" alt="Biomed"></div>
+          <div class="review-author-info">
+            <span class="review-author-name">Олесь Пронів</span>
+            <span class="review-author-role">Biomed · Співвласник, СЕО компанії</span>
+          </div>
+        </div>
+        <span class="review-tag">БІЗНЕС</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container faq-inner">
+    <div class="faq-heading">
+      <p class="eyebrow eyebrow--light">07 / FAQ</p>
+      <h2 class="section-title section-title--light">Відповіді на часті питання</h2>
+    </div>
+
+    <div class="faq-content">
+      <div class="accordion accordion--faq" id="faqAccordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Скільки часу займає встановлення обладнання?</span>
+            <span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Термін залежить від типу об'єкта, його площі та комплектації. Після огляду ми формуємо зрозумілий план робіт і погоджуємо дедлайни.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Як швидко ви реагуєте на тривожний сигнал?</span>
+            <span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Група швидкого реагування виїжджає одразу після надходження сигналу, орієнтовний час прибуття узгоджується під конкретний об'єкт.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Чи працюєте ви по всій Україні?</span>
+            <span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Частина послуг доступна по всій країні, основний фокус виїзних напрямків — Західна Україна.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Яке обладнання ви використовуєте?</span>
+            <span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Ми працюємо з обладнанням AJAX та іншими перевіреними виробниками систем безпеки й відеоспостереження.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Від чого залежить вартість послуг?</span>
+            <span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Вартість формується залежно від типу об'єкта, обраного комплекту обладнання та формату охорони.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTATION -->
+<section class="section consultation" id="consultation">
+  <div class="container consultation-inner">
+    <div class="consultation-text">
+      <p class="eyebrow">08 / Перша консультація — Безкоштовно</p>
+      <h2 class="section-title">Оберіть напрям консультації</h2>
+      <p class="consultation-desc">Після вибору напряму можна одразу зв'язатися з SHIELD та отримати рішення під свій об'єкт.</p>
+      <ul class="checklist">
+        <li>Безкоштовна перша консультація</li>
+        <li>Підбір рішення під задачу й бюджет</li>
+        <li>Зручний зв'язок телефоном або в месенджері</li>
+      </ul>
+    </div>
+
+    <form class="consultation-form" id="consultationForm">
+      <h3>Залишити заявку</h3>
+
+      <label class="form-label" for="fullName">Ваше ім'я та прізвище</label>
+      <input class="form-input" type="text" id="fullName" name="fullName" placeholder="Ім'я Прізвище" required>
+
+      <label class="form-label" for="phone">Номер телефону</label>
+      <input class="form-input" type="tel" id="phone" name="phone" placeholder="+38 (0__) ___ __ __" required>
+
+      <label class="form-label">Напрям консультації</label>
+      <div class="pill-group" id="pillGroup">
+        <button type="button" class="pill is-active" data-value="Охорона квартири">Охорона квартири</button>
+        <button type="button" class="pill" data-value="Охорона будинку">Охорона будинку</button>
+        <button type="button" class="pill" data-value="Охорона бізнесу">Охорона бізнесу</button>
+        <button type="button" class="pill" data-value="Відеоспостереження">Відеоспостереження</button>
+        <button type="button" class="pill" data-value="AJAX">AJAX</button>
+        <button type="button" class="pill" data-value="Фізична охорона">Фізична охорона</button>
+        <button type="button" class="pill" data-value="СКУД">СКУД</button>
+        <button type="button" class="pill" data-value="Інше">Інше</button>
+      </div>
+      <input type="hidden" name="direction" id="directionInput" value="Охорона квартири">
+
+      <div class="form-submit-row">
+        <button type="submit" class="btn btn-primary">Отримати консультацію <span class="arrow">→</span></button>
+      </div>
+      <p class="form-disclaimer">Дані конфіденційні й використовуються лише для обробки заявки.</p>
+      <p class="form-success" id="formSuccess">Дякуємо! Заявку надіслано — ми зв'яжемося з вами найближчим часом.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#top" class="logo">
+        <img src="media/logo.png" alt="SHIELD" class="logo-img footer-logo-img">
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Контакти</h4>
+      <a href="tel:+380980079007">+38 (098) 007 90 07</a>
+      <a href="tel:+380730073887">+38 (073) 007 38 87</a>
+      <a href="mailto:info@shield-ukraine.com.ua">info@shield-ukraine.com.ua</a>
+      <span>Україна - працюємо по всій країні</span>
+    </div>
+
+    <div class="footer-col">
+      <h4>Навігація</h4>
+      <a href="#top">Головна</a>
+      <a href="#services">Послуги</a>
+      <a href="#advantages">Переваги</a>
+      <a href="#clients">Клієнти</a>
+      <a href="#reviews">Відгуки</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© SHIELD. Всі права захищено.</span>
+    <div class="footer-legal">
+      <a href="#">Політика конфіденційності</a>
+      <a href="#">Умови користування</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="shiny-button.js?v=20260923l"></script>
+<script src="animations.js?v=20261008e"></script>
+<script src="script.js?v=20261008h"></script>
+</body>
+</html>

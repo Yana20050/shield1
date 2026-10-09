@@ -1,0 +1,185 @@
+/* Shiny sweeping-border button effect — vanilla CSS port (pure CSS, no JS/WebGL required). */
+
+@property --gleam-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@property --gleam-angle-offset {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@property --gleam-percent {
+  syntax: "<percentage>";
+  initial-value: 5%;
+  inherits: false;
+}
+@property --gleam-shine {
+  syntax: "<color>";
+  initial-value: white;
+  inherits: false;
+}
+
+.shiny-btn{
+  --gleam-base: #000000;
+  --gleam-inset: #1a1818;
+  --gleam-label: #ffffff;
+  --gleam-accent: #2f6bff;
+  --gleam-accent-soft: #7aa2ff;
+  --gleam-duration: 3s;
+  --gleam-transition: .8s cubic-bezier(.25,1,.5,1);
+  --gleam-shadow-size: 2px;
+
+  isolation:isolate;
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  overflow:hidden;
+  cursor:pointer;
+  outline-offset:4px;
+  padding:14px 26px;
+  font-family:inherit;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.2;
+  border:1px solid transparent;
+  border-radius:999px;
+  color:var(--gleam-label);
+  background:
+    linear-gradient(var(--gleam-base),var(--gleam-base)) padding-box,
+    conic-gradient(
+      from calc(var(--gleam-angle) - var(--gleam-angle-offset)),
+      transparent,
+      var(--gleam-accent) var(--gleam-percent),
+      var(--gleam-shine) calc(var(--gleam-percent) * 2),
+      var(--gleam-accent) calc(var(--gleam-percent) * 3),
+      transparent calc(var(--gleam-percent) * 4)
+    ) border-box;
+  box-shadow:inset 0 0 0 1px var(--gleam-inset);
+  transition:var(--gleam-transition);
+  transition-property:--gleam-angle-offset,--gleam-percent,--gleam-shine,transform;
+}
+
+.shiny-btn::before,
+.shiny-btn::after,
+.shiny-btn .shiny-btn-label::before{
+  content:"";
+  pointer-events:none;
+  position:absolute;
+  inset-inline-start:50%;
+  inset-block-start:50%;
+  translate:-50% -50%;
+  z-index:-1;
+}
+
+.shiny-btn:active{
+  translate:0 1px;
+}
+
+.shiny-btn::before{
+  --size: calc(100% - var(--gleam-shadow-size) * 3);
+  --position: 2px;
+  --space: calc(var(--position) * 2);
+  width:var(--size);
+  height:var(--size);
+  background:radial-gradient(circle at var(--position) var(--position), white calc(var(--position) / 4), transparent 0) padding-box;
+  background-size:var(--space) var(--space);
+  background-repeat:space;
+  -webkit-mask-image:conic-gradient(from calc(var(--gleam-angle) + 45deg), black, transparent 10% 90%, black);
+  mask-image:conic-gradient(from calc(var(--gleam-angle) + 45deg), black, transparent 10% 90%, black);
+  border-radius:inherit;
+  opacity:.4;
+  z-index:-1;
+}
+
+.shiny-btn::after{
+  width:100%;
+  aspect-ratio:1;
+  background:linear-gradient(-50deg, transparent, var(--gleam-accent), transparent);
+  -webkit-mask-image:radial-gradient(circle at bottom, transparent 40%, black);
+  mask-image:radial-gradient(circle at bottom, transparent 40%, black);
+  opacity:.6;
+  animation: shiny-btn-shimmer linear infinite;
+}
+
+.shiny-btn-label{
+  position:relative;
+  z-index:1;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+
+.shiny-btn-label::before{
+  --size: calc(100% + 1rem);
+  width:var(--size);
+  height:var(--size);
+  box-shadow:inset 0 -1ex 2rem 4px var(--gleam-accent);
+  opacity:0;
+  transition:opacity var(--gleam-transition);
+  animation: calc(var(--gleam-duration) * 1.5) shiny-btn-breathe linear infinite;
+}
+
+.shiny-btn,
+.shiny-btn::before,
+.shiny-btn::after{
+  animation:
+    gleam-angle-spin var(--gleam-duration) linear infinite,
+    gleam-angle-spin calc(var(--gleam-duration) / .4) linear infinite reverse paused;
+  animation-composition:add;
+}
+.shiny-btn::after{
+  animation-name: shiny-btn-shimmer, shiny-btn-shimmer;
+}
+
+.shiny-btn:is(:hover,:focus-visible){
+  --gleam-percent:20%;
+  --gleam-angle-offset:95deg;
+  --gleam-shine:var(--gleam-accent-soft);
+}
+
+.shiny-btn:is(:hover,:focus-visible),
+.shiny-btn:is(:hover,:focus-visible)::before,
+.shiny-btn:is(:hover,:focus-visible)::after{
+  animation-play-state:running;
+}
+
+.shiny-btn:is(:hover,:focus-visible) .shiny-btn-label::before{
+  opacity:1;
+}
+
+@keyframes gleam-angle-spin{
+  to{ --gleam-angle: 360deg; }
+}
+@keyframes shiny-btn-shimmer{
+  to{ rotate:360deg; }
+}
+@keyframes shiny-btn-breathe{
+  from, to{ scale:1; }
+  50%{ scale:1.2; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .shiny-btn,
+  .shiny-btn::before,
+  .shiny-btn::after,
+  .shiny-btn-label::before{
+    animation:none !important;
+  }
+  .shiny-btn:is(:hover,:focus-visible),
+  .shiny-btn:is(:hover,:focus-visible)::before,
+  .shiny-btn:is(:hover,:focus-visible)::after{
+    animation-play-state:paused !important;
+  }
+  .shiny-btn:is(:hover,:focus-visible) .shiny-btn-label::before{
+    opacity:0;
+  }
+  .shiny-btn{ transition:none; }
+}
+
+/* size variants */
+.shiny-btn.shiny-btn--sm{ padding:11px 20px; font-size:13.5px; }
+.shiny-btn.shiny-btn--compact{ padding:14px 30px; }

@@ -1,0 +1,69 @@
+/* Premium micro-interactions: hover lift/tilt for interactive cards.
+   Pure CSS transform/box-shadow transitions — cheap, GPU-composited, no JS needed.
+   Entrance/scroll-reveal animations live in animations.js (GSAP). */
+
+.service-card,
+.process-card,
+.price-card,
+.review-card,
+.location-card,
+.logo-card{
+  transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, border-color .35s ease;
+  will-change: transform;
+}
+
+.service-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -16px rgba(10,14,40,.45);
+}
+
+.process-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -18px rgba(10,14,40,.45);
+}
+
+.price-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -18px rgba(10,14,40,.25);
+}
+.price-card--accent:hover{
+  box-shadow: 0 24px 48px -18px rgba(30,45,140,.55);
+}
+
+.review-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(120,140,255,.35);
+}
+
+.location-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(120,140,255,.35);
+}
+
+.logo-card{
+  transition: transform .3s ease, filter .3s ease;
+}
+.logo-card:hover{
+  transform: translateY(-3px) scale(1.03);
+}
+
+.accordion-trigger{
+  transition: color .2s ease;
+}
+
+/* Reveal utility: entrance state is applied by JS only when motion is allowed,
+   so with JS disabled or prefers-reduced-motion the content is already visible. */
+.gsap-reveal{
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .service-card,
+  .process-card,
+  .price-card,
+  .review-card,
+  .location-card,
+  .logo-card{
+    transition: none;
+  }
+}
